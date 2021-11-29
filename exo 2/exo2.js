@@ -13,8 +13,8 @@ function sanitise(x) {
 
 /**
  * Read a specific file
- * @param {*} path 
- * @param {*} options 
+ * @param {String} path 
+ * @param {object} options 
  * @returns 
  */
 function readFile(path, options = {}) {
@@ -26,6 +26,13 @@ function readFile(path, options = {}) {
     })
 }
 
+/**
+ * Write a new file from data and path
+ * @param {String} path 
+ * @param {String} data 
+ * @param {Object} options 
+ * @returns 
+ */
 function writeFile(path, data, options = {}) {
     return new Promise((resolve, reject) => {
         fs.writeFile(path, data, options, (err, data) => {
