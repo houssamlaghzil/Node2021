@@ -43,18 +43,13 @@ const checkProbability = () => {
 
         const uniqueArray = []
 
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 3; i++) {
             uniqueArray.push(multipleSymbols[crypto.randomInt(0, 8)])
         }
 
-        let count = {};
-        uniqueArray.forEach(function(i) { count[i] = (count[i] || 0) + 1; });
-        
-        Object.keys(count).forEach(element => {
-            if (count[element] === 3) {
-                totalCount += 1
-            }
-        })
+        if (uniqueArray.every( v => v === uniqueArray[0] )) {
+            totalCount += 1
+        }
 
         newArray.push(uniqueArray)
     }
