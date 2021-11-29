@@ -1,0 +1,1 @@
+{"SumSugars":533,"AvgRating":42.18181818181818,"MaxSodium":320,"MinProtein":1}
