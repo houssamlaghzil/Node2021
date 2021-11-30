@@ -4,13 +4,6 @@ var ss = require('simple-statistics')
 
 const fileName = process.argv[2]
 
-function sanitise(x) {
-    if (isNaN(x)) {
-        return NaN;
-    }
-    return x;
-}
-
 /**
  * Read a specific file
  * @param {String} path 
